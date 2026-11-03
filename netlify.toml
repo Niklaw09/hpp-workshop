@@ -1,0 +1,13 @@
+# Netlify reads this automatically when the GitHub repo is connected.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page app: send /join/ABC123 etc. to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
